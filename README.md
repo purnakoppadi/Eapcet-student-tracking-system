@@ -1,4 +1,3 @@
- ````md
 # 📊 EAPCET Student Tracking System (STS)
 
 <div align="center">
@@ -124,7 +123,7 @@ Admission workflow completed.
 
 ---
 
-# 📁 Project Structure
+# 📁 Folder Structure
 
 ```bash
 MERN Stack Project/
@@ -146,8 +145,12 @@ MERN Stack Project/
 │   ├── uploads/
 │   └── utils/
 │
+├── public/
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
 └── README.md
-````
+```
 
 ---
 
@@ -252,32 +255,32 @@ Rank,Name,Branch
 
 ## Student APIs
 
-| Method | Endpoint            | Description      |
-| ------ | ------------------- | ---------------- |
-| GET    | `/api/students`     | Get all students |
-| POST   | `/api/students`     | Add student      |
-| PUT    | `/api/students/:id` | Update student   |
-| DELETE | `/api/students/:id` | Delete student   |
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/students` | Get all students |
+| POST | `/api/students` | Add student |
+| PUT | `/api/students/:id` | Update student |
+| DELETE | `/api/students/:id` | Delete student |
 
 ---
 
 ## Workflow APIs
 
-| Method | Endpoint                     | Description        |
-| ------ | ---------------------------- | ------------------ |
-| PATCH  | `/api/students/:id/reported` | Mark Reported      |
-| PATCH  | `/api/students/:id/phone`    | Save Phone Details |
-| PATCH  | `/api/students/:id/scanning` | Mark Scan Complete |
-| PATCH  | `/api/students/:id/final`    | Final Verification |
+| Method | Endpoint | Description |
+|---|---|---|
+| PATCH | `/api/students/:id/reported` | Mark Reported |
+| PATCH | `/api/students/:id/phone` | Save Phone Details |
+| PATCH | `/api/students/:id/scanning` | Mark Scan Complete |
+| PATCH | `/api/students/:id/final` | Final Verification |
 
 ---
 
 ## Analytics APIs
 
-| Method | Endpoint                   | Description         |
-| ------ | -------------------------- | ------------------- |
-| GET    | `/api/analytics/dashboard` | Dashboard Analytics |
-| GET    | `/api/analytics/branches`  | Branch Analytics    |
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/analytics/dashboard` | Dashboard Analytics |
+| GET | `/api/analytics/branches` | Branch Analytics |
 
 ---
 
@@ -312,74 +315,62 @@ Rank,Name,Branch
 
 # 🔄 Workflow Logic
 
-| Condition               | Status      |
-| ----------------------- | ----------- |
-| No steps completed      | Pending     |
+| Condition | Status |
+|---|---|
+| No steps completed | Pending |
 | Partial steps completed | In Progress |
-| All steps completed     | Completed   |
+| All steps completed | Completed |
 
 ---
 
 # 📱 Pages
 
 ## Dashboard
-
-* Analytics Cards
-* Daily Progress
-* Recent Activity
+- Analytics Cards
+- Daily Progress
+- Recent Activity
 
 ## Students
-
-* Student Table
-* Search
-* Filters
-* Workflow Buttons
+- Student Table
+- Search
+- Filters
+- Workflow Buttons
 
 ## Analytics
-
-* Branch Analytics
-* Workflow Statistics
+- Branch Analytics
+- Workflow Statistics
 
 ## Upload
-
-* CSV Upload
-* Preview Data
+- CSV Upload
+- Preview Data
 
 ## Settings
-
-* Theme Toggle
-* Preferences
-
----
-
- 
+- Theme Toggle
+- Preferences
 
 ---
 
 # 🚀 Deployment
 
 ## Frontend Deployment
-
-* Vercel
+- Vercel
 
 ## Backend Deployment
-
-* Render
+- Render
 
 ## Database
-
-* MongoDB Atlas
+- MongoDB Atlas
 
 ---
 
 # 🔮 Future Improvements
 
-* Authentication System
-* Role-Based Access
-* SMS Notifications
-* Email Notifications
-* PDF Reports
-* Advanced Analytics
+- Authentication System
+- Role-Based Access
+- SMS Notifications
+- Email Notifications
+- PDF Reports
+- Advanced Analytics
 
 ---
 
@@ -387,19 +378,19 @@ Rank,Name,Branch
 
 **Purna Koppadi**
 
-GitHub:
-[https://github.com/purnakoppadi](https://github.com/purnakoppadi)
+GitHub:  
+https://github.com/purnakoppadi
 
 ---
 
 # 📄 Project Status
 
-✅ Frontend Completed
-✅ Backend Completed
-✅ MongoDB Integrated
-✅ CSV Upload Working
-✅ Workflow Tracking Working
-✅ Analytics Dashboard Working
+✅ Frontend Completed  
+✅ Backend Completed  
+✅ MongoDB Integrated  
+✅ CSV Upload Working  
+✅ Workflow Tracking Working  
+✅ Analytics Dashboard Working  
 
 ---
 
@@ -414,4 +405,3 @@ This project was developed for internship assessment and educational purposes.
 ### ⭐ If you like this project, consider giving it a star ⭐
 
 </div>
-```
