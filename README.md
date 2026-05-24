@@ -146,12 +146,14 @@ MERN Stack Project/
 │   └── utils/
 │
 └── README.md
+# ⚙️ Installation
 
+## Clone Repository
 
-⚙️ Installation
-Clone Repository
+```bash
 git clone https://github.com/purnakoppadi/eapcet-sts.git
 cd eapcet-sts
+
 💻 Frontend Setup
 Install Dependencies
 npm install
