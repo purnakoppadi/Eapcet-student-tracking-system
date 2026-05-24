@@ -394,9 +394,7 @@ https://github.com/purnakoppadi
 
 ---
 
-# 📌 Note
-
-This project was developed for internship assessment and educational purposes.
+ 
 
 ---
 
