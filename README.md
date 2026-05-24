@@ -396,7 +396,13 @@ https://github.com/purnakoppadi
 
 ---
 
- 
+ ## Live Demo
+
+Frontend:
+ https://eapcet-student-tracking-system-7q0rsrfl1.vercel.app/
+
+Backend:
+ https://eapcet-student-tracking-system.onrender.com/
 
 ---
 
