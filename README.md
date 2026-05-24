@@ -1,3 +1,4 @@
+ ````md
 # 📊 EAPCET Student Tracking System (STS)
 
 <div align="center">
@@ -146,6 +147,10 @@ MERN Stack Project/
 │   └── utils/
 │
 └── README.md
+````
+
+---
+
 # ⚙️ Installation
 
 ## Clone Repository
@@ -153,65 +158,132 @@ MERN Stack Project/
 ```bash
 git clone https://github.com/purnakoppadi/eapcet-sts.git
 cd eapcet-sts
+```
 
-💻 Frontend Setup
-Install Dependencies
+---
+
+# 💻 Frontend Setup
+
+## Install Dependencies
+
+```bash
 npm install
-Run Frontend
+```
+
+## Run Frontend
+
+```bash
 npm run dev
+```
 
 Frontend runs on:
 
+```bash
 http://localhost:5173
-🖥 Backend Setup
-Navigate to Server Folder
+```
+
+---
+
+# 🖥 Backend Setup
+
+## Navigate to Server Folder
+
+```bash
 cd server
-Install Dependencies
+```
+
+## Install Dependencies
+
+```bash
 npm install
-Create .env File
+```
+
+## Create `.env` File
+
+```env
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
 CLIENT_URL=http://localhost:5173
-Run Backend
+```
+
+## Run Backend
+
+```bash
 npm run dev
+```
 
 Backend runs on:
 
+```bash
 http://localhost:5000
-🍃 MongoDB Setup
-Create MongoDB Atlas account
-Create Cluster
-Add Network Access IP
-Create Database User
-Copy Connection String
-Add connection string to .env
+```
+
+---
+
+# 🍃 MongoDB Setup
+
+1. Create MongoDB Atlas account
+2. Create Cluster
+3. Add Network Access IP
+4. Create Database User
+5. Copy Connection String
+6. Add connection string to `.env`
 
 Example:
 
+```env
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/studenttracker
-📤 CSV Upload Format
+```
+
+---
+
+# 📤 CSV Upload Format
+
+```csv
 Rank,Name,Branch
 1001,Rajesh,CSE
 1002,Priya,AIML
 1003,Aman,CIC
-🔌 API Endpoints
-Student APIs
-Method	Endpoint	Description
-GET	/api/students	Get all students
-POST	/api/students	Add student
-PUT	/api/students/:id	Update student
-DELETE	/api/students/:id	Delete student
-Workflow APIs
-Method	Endpoint	Description
-PATCH	/api/students/:id/reported	Mark Reported
-PATCH	/api/students/:id/phone	Save Phone Details
-PATCH	/api/students/:id/scanning	Mark Scan Complete
-PATCH	/api/students/:id/final	Final Verification
-Analytics APIs
-Method	Endpoint	Description
-GET	/api/analytics/dashboard	Dashboard Analytics
-GET	/api/analytics/branches	Branch Analytics
-🗄 Database Schema
+```
+
+---
+
+# 🔌 API Endpoints
+
+## Student APIs
+
+| Method | Endpoint            | Description      |
+| ------ | ------------------- | ---------------- |
+| GET    | `/api/students`     | Get all students |
+| POST   | `/api/students`     | Add student      |
+| PUT    | `/api/students/:id` | Update student   |
+| DELETE | `/api/students/:id` | Delete student   |
+
+---
+
+## Workflow APIs
+
+| Method | Endpoint                     | Description        |
+| ------ | ---------------------------- | ------------------ |
+| PATCH  | `/api/students/:id/reported` | Mark Reported      |
+| PATCH  | `/api/students/:id/phone`    | Save Phone Details |
+| PATCH  | `/api/students/:id/scanning` | Mark Scan Complete |
+| PATCH  | `/api/students/:id/final`    | Final Verification |
+
+---
+
+## Analytics APIs
+
+| Method | Endpoint                   | Description         |
+| ------ | -------------------------- | ------------------- |
+| GET    | `/api/analytics/dashboard` | Dashboard Analytics |
+| GET    | `/api/analytics/branches`  | Branch Analytics    |
+
+---
+
+# 🗄 Database Schema
+
+```javascript
 {
   rank,
   name,
@@ -234,60 +306,93 @@ GET	/api/analytics/branches	Branch Analytics
 
   status
 }
-🔄 Workflow Logic
-Condition	Status
-No steps completed	Pending
-Partial steps completed	In Progress
-All steps completed	Completed
-📱 Pages
-Dashboard
-Analytics Cards
-Daily Progress
-Recent Activity
-Students
-Student Table
-Search
-Filters
-Workflow Buttons
-Analytics
-Branch Analytics
-Workflow Statistics
-Upload
-CSV Upload
-Preview Data
-Settings
-Theme Toggle
-Preferences
-📸 Screenshots
+```
 
-Add screenshots here:
+---
 
-/screenshots/dashboard.png
-/screenshots/students.png
-/screenshots/upload.png
-/screenshots/analytics.png
-🚀 Deployment
-Frontend Deployment
-Vercel
-Backend Deployment
-Render
-Database
-MongoDB Atlas
-🔮 Future Improvements
-Authentication System
-Role-Based Access
-SMS Notifications
-Email Notifications
-PDF Reports
-Advanced Analytics
-👨‍💻 Author
+# 🔄 Workflow Logic
 
-Purna Koppadi
+| Condition               | Status      |
+| ----------------------- | ----------- |
+| No steps completed      | Pending     |
+| Partial steps completed | In Progress |
+| All steps completed     | Completed   |
+
+---
+
+# 📱 Pages
+
+## Dashboard
+
+* Analytics Cards
+* Daily Progress
+* Recent Activity
+
+## Students
+
+* Student Table
+* Search
+* Filters
+* Workflow Buttons
+
+## Analytics
+
+* Branch Analytics
+* Workflow Statistics
+
+## Upload
+
+* CSV Upload
+* Preview Data
+
+## Settings
+
+* Theme Toggle
+* Preferences
+
+---
+
+ 
+
+---
+
+# 🚀 Deployment
+
+## Frontend Deployment
+
+* Vercel
+
+## Backend Deployment
+
+* Render
+
+## Database
+
+* MongoDB Atlas
+
+---
+
+# 🔮 Future Improvements
+
+* Authentication System
+* Role-Based Access
+* SMS Notifications
+* Email Notifications
+* PDF Reports
+* Advanced Analytics
+
+---
+
+# 👨‍💻 Author
+
+**Purna Koppadi**
 
 GitHub:
-https://github.com/purnakoppadi
+[https://github.com/purnakoppadi](https://github.com/purnakoppadi)
 
-📄 Project Status
+---
+
+# 📄 Project Status
 
 ✅ Frontend Completed
 ✅ Backend Completed
@@ -296,10 +401,17 @@ https://github.com/purnakoppadi
 ✅ Workflow Tracking Working
 ✅ Analytics Dashboard Working
 
-📌 Note
+---
+
+# 📌 Note
 
 This project was developed for internship assessment and educational purposes.
 
+---
+
 <div align="center">
-⭐ If you like this project, consider giving it a star ⭐
-</div> ```
+
+### ⭐ If you like this project, consider giving it a star ⭐
+
+</div>
+```
