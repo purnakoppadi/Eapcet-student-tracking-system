@@ -153,29 +153,34 @@ async function uploadStudents(req, res) {
 
   } catch (error) {
     console.error(`[Upload] Error in uploadStudents: ${error.message}`);
+    console.error('[Upload] Stack trace:', error.stack);
     
     // Ensure file is deleted even on error
-    try {
-      if (filePath && fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath);
-        console.log(`[Upload] Cleaned up file: ${filePath}`);
+    if (filePath) {
+      try {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+          console.log(`[Upload] ✅ File cleaned up on error: ${filePath}`);
+        }
+      } catch (cleanupError) {
+        console.error(`[Upload] ⚠️ Cleanup error: ${cleanupError.message}`);
       }
-    } catch (cleanupError) {
-      console.error(`[Upload] Cleanup error: ${cleanupError.message}`);
     }
 
     // Re-throw the error for asyncHandler middleware
     throw error;
 
   } finally {
-    // Final cleanup attempt
-    try {
-      if (filePath && fs.existsSync(filePath)) {
-        await fs.promises.unlink(filePath);
-        console.log(`[Upload] File cleaned up in finally block: ${filePath}`);
+    // Final cleanup attempt (safety net)
+    if (filePath && filePath !== req.file?.path) {
+      try {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+          console.log(`[Upload] ✅ File cleaned up in finally block: ${filePath}`);
+        }
+      } catch (cleanupError) {
+        console.warn(`[Upload] ⚠️ Final cleanup skipped: ${cleanupError.message}`);
       }
-    } catch (cleanupError) {
-      console.warn(`[Upload] Final cleanup failed: ${cleanupError.message}`);
     }
   }
 }
