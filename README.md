@@ -159,8 +159,10 @@ MERN Stack Project/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/purnakoppadi/eapcet-sts.git
-cd eapcet-sts
+git clone https://github.com/purnakoppadi/Eapcet-student-tracking-system
+.git
+cd Eapcet-student-tracking-system
+
 ```
 
 ---
